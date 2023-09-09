@@ -8,11 +8,12 @@ app.set("view enigne", "ejs");
 // re Request paxi Response hunai paryo
 app.get("/", (req, res) => {
   // views folder vitra ko ejs file lai track garxa
-  res.render("home.ejs");
+  const name = "Rudra Nahawang";
+  res.render("home.ejs", { name });
 });
 
 app.get("/about", (req, res) => {
-  res.render("about.ejs");
+  res.render("about.ejs", { firstname: "Saroj" });
 });
 
 app.get("/contact", (req, res) => {
